@@ -1,3 +1,5 @@
+//codeforce_problem_71A
+//problem_name_Way_to_long_word
 
 #include<stdio.h>
 #include<string.h>
