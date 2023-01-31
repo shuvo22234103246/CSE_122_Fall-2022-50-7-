@@ -1,36 +1,33 @@
-//petya_and_string
-#include<bits/stdc++.h>
+#include<iostream>
+#include<string.h>
 using namespace std;
 int main()
 {
-    long long i;
-    string f,s;
-    while(cin>>f>>s)
-    {
-        long sum1=0,sum2=0;
-        for(i=0; i<f.size(); i++)
-        {
-            if(f[i]>='A'&&f[i]<='Z')
-                f[i]=f[i]-'A'+97;
+int i =0,result = 0;
+ char str[105],ch[105];
 
-            if(s[i]>='A'&&s[i]<='Z')
-                s[i]=s[i]-'A'+97;
-        }
-        for(i=0; i<s.size(); i++)
-        {
-            if(f[i]>s[i])
-                {
-                    cout<<"1\n";
-                    return 0;}
+cin >> str >> ch;
+for(i = 0;str[i]!='\0';i++)
+{
+if(str[i]>= 'A' && str[i]<='Z')
+{
+str[i] = str[i]+32;
+}
+}
+for(i = 0;ch[i]!='\0';i++)
+{
+if(ch[i]>= 'A' && ch[i]<='Z')
+{
+ch[i] = ch[i]+32;
+}
+}
 
-            if(s[i]>f[i])
-                {
-                    cout<<"-1\n";
-                    return 0;
-                }
+result = strcmp(str,ch);
+if(result<0) cout<<("-1\n");
+else if(result >0)cout<<("1\n");
+else cout<< ("0\n");
 
-        }
-        cout<<"0\n";
-    }
-    return 0;
+
+
+return 0;
 }
